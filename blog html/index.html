@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div id="page" class="blog">
+
+    {% include '_includes/_punaise/page_header.html' %}
+
+    <div class="page_main_zone blog_main_zone pagePa">
+
+        <!-- BLOG NAV -->
+        <section class="blgNv">
+            <div class="container">
+                <div class="dis-flex blgNvFlx">
+                    <div class="blgNvLeft">
+                        <h1 class="blgNvTit"> All posts (45) </h1>
+                    </div>
+                    <div class="blgNvRight">
+                        <div class="ByFilt">
+                            <div class="dis-flex ByFiltFlx">
+                                <div class="left">
+                                    <h3 class="cc"> Filter by </h3>
+                                </div>
+                                <div class="right">
+                                    <div class="cusDropdown">
+                                        <button class="activedBtn"> 
+                                            <div class="grid grid_2 activedBtnFlx">
+                                                <div class="left_span dis-flex"> All </div>
+                                                <div class="right_span dis-flex"> 
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                                    </svg>
+                                                </div>
+                                            </div> 
+                                        </button>
+                                        <div class="ByDivNav">
+                                            <ul class="ByUl">
+                                                <li class="ByLi"><a href="{% url 'blog' %}"> All </a></li>
+                                                <li class="ByLi"><a href="{% url 'blog' %}"> Machine Learning </a></li>
+                                                <li class="ByLi"><a href="{% url 'blog' %}"> Artificial Inteligence </a></li>
+                                                <li class="ByLi"><a href="{% url 'blog' %}"> Data Science </a></li>
+                                                <li class="ByLi"><a href="{% url 'blog' %}"> Web Development </a></li>
+                                                <li class="ByLi"><a href="{% url 'blog' %}"> Business </a></li>
+                                                <li class="ByLi"><a href="{% url 'blog' %}"> Travel </a></li>
+                                                <li class="ByLi"><a href="{% url 'blog' %}"> Tutorial & Tips </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG SECTION -->
+        <section class="blog_section">
+            <div class="container">
+                <div class="blog_section_zone grid grid_3s">
+                    {% include '_includes/_punaise/blog_box.html' %}
+                    {% include '_includes/_punaise/blog_box.html' %}
+                    {% include '_includes/_punaise/blog_box.html' %}
+                    {% include '_includes/_punaise/blog_box.html' %}
+                    {% include '_includes/_punaise/blog_box.html' %}
+                    {% include '_includes/_punaise/blog_box.html' %}
+                    {% include '_includes/_punaise/blog_box.html' %}
+                    {% include '_includes/_punaise/blog_box.html' %}
+                    {% include '_includes/_punaise/blog_box.html' %}
+                    {% include '_includes/_punaise/blog_box.html' %}
+                    {% include '_includes/_punaise/blog_box.html' %}
+                    {% include '_includes/_punaise/blog_box.html' %}
+                </div>
+                <div class="load_more_zone t-center">
+                    <button class="load_more_btn"> Load more </button>
+                </div>
+            </div>
+        </section>
+
+
+
+    </div>
+
+</div>
+
+{% endblock %}
